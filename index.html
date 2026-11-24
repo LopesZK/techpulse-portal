@@ -12,12 +12,15 @@
   <!-- Cabeçalho Principal com ID exclusivo -->
   <header id="cabecalho-principal">
     <div class="container">
-      <h1 class="logo">Tech<span>Pulse</span></h1>
+      <div class="marca-grupo">
+        <h1 class="logo">Tech<span>Pulse</span></h1>
+        <span class="selo-edicao">PORTAL TECH</span>
+      </div>
       <nav aria-label="Menu principal">
         <ul class="menu-navegacao">
           <li><a href="#destaque">Início</a></li>
-          <li><a href="#tecnologias">Tecnologias</a></li>
-          <li><a href="#noticias">Notícias</a></li>
+          <li><a href="#tecnologias">Editorias</a></li>
+          <li><a href="#noticias">Artigos</a></li>
           <li><a href="#sobre">Sobre</a></li>
         </ul>
       </nav>
@@ -26,15 +29,19 @@
 
   <!-- Conteúdo Principal -->
   <main class="container">
-    
+
     <!-- Seção de Apresentação / Hero -->
     <section id="destaque" class="cartao-destaque">
       <div class="texto-destaque">
+        <span class="etiqueta-destaque">● EM ALTA NA TECNOLOGIA</span>
         <h2>O pulso diário da inovação digital</h2>
         <p>
           Bem-vindo ao <strong>TechPulse</strong>, o seu portal independente de análises, tendências e cobertura aprofundada sobre o universo da <em>tecnologia aplicada ao mundo real</em>. Traduzimos temas complexos de engenharia de software, inteligência artificial e segurança digital em conteúdo claro para profissionais e entusiastas.
         </p>
-        <a href="#noticias" class="btn-acao">Explorar Últimas Notícias</a>
+        <div class="acoes-hero">
+          <a href="#noticias" class="btn-acao">Explorar Últimas Notícias</a>
+          <a href="#tecnologias" class="btn-secundario">Ver Editorias</a>
+        </div>
       </div>
       <div class="imagem-destaque">
         <img 
@@ -44,40 +51,81 @@
       </div>
     </section>
 
-    <!-- Seção de Tecnologias e Serviços Cobertos -->
+    <!-- Seção de Tecnologias e Serviços Cobertos (Lista estilizada em Grid) -->
     <section id="tecnologias" class="secao-servicos">
-      <h2>Principais Áreas e Serviços do Portal</h2>
-      <p>Acompanhe nossas editorias especializadas e ferramentas exclusivas para manter sua carreira atualizada:</p>
-      
+      <div class="cabecalho-secao">
+        <h2>Principais Áreas e Serviços do Portal</h2>
+        <p>Acompanhe nossas três editorias especializadas para manter sua carreira atualizada:</p>
+      </div>
+
       <ul class="lista-tecnologias">
-        <li>
-          <strong>Inteligência Artificial &amp; Dados:</strong> Análises práticas sobre modelos generativos, automação inteligente e ética algorítmica.
+        <li class="card-tecnologia">
+          <span class="icone-card">🤖</span>
+          <strong>Inteligência Artificial &amp; Dados</strong>
+          <span>Análises práticas sobre modelos generativos, automação inteligente e ética algorítmica.</span>
         </li>
-        <li>
-          <strong>Engenharia Web &amp; Cloud:</strong> Guias de arquitetura front-end, padrões HTML5/CSS3, computação em nuvem e performance.
+        <li class="card-tecnologia">
+          <span class="icone-card">💻</span>
+          <strong>Engenharia Web &amp; Cloud</strong>
+          <span>Guias de arquitetura front-end, padrões HTML5/CSS3, computação em nuvem e performance.</span>
         </li>
-        <li>
-          <strong>Cibersegurança &amp; Privacidade:</strong> Alertas de vulnerabilidades, boas práticas de proteção de dados e auditoria de sistemas.
+        <li class="card-tecnologia">
+          <span class="icone-card">🔒</span>
+          <strong>Cibersegurança &amp; Privacidade</strong>
+          <span>Alertas de vulnerabilidades, boas práticas de proteção de dados e auditoria de sistemas.</span>
         </li>
       </ul>
     </section>
 
-    <!-- Artigo em Destaque -->
-    <article id="noticias" class="artigo-principal">
-      <h2>Destaque da Semana: A Importância da Web Semântica e Acessível</h2>
-      <p>
-        Construir interfaces modernas vai muito além da estética visual. Quando estruturamos páginas com <strong>HTML5 semântico</strong> e folhas de estilo <em>responsivas em CSS3</em>, garantimos que leitores de tela, motores de busca e usuários em dispositivos móveis tenham uma experiência rápida, inclusiva e consistente.
-      </p>
-      <a href="#cabecalho-principal" class="btn-acao">Voltar ao Topo</a>
-    </article>
+    <!-- Seção de Artigos e Notícias -->
+    <section id="noticias" class="secao-noticias">
+      <div class="cabecalho-secao">
+        <h2>Leituras em Destaque</h2>
+        <p>Artigos selecionados pela nossa equipe editorial esta semana:</p>
+      </div>
+
+      <div class="grade-artigos">
+        <article class="artigo-principal">
+          <div class="meta-artigo">
+            <span class="tag-categoria">ENGENHARIA WEB</span>
+            <span class="tempo-leitura">5 min de leitura</span>
+          </div>
+          <h2>A Importância da Web Semântica e Acessível</h2>
+          <p>
+            Construir interfaces modernas vai muito além da estética visual. Quando estruturamos páginas com <strong>HTML5 semântico</strong> e folhas de estilo <em>responsivas em CSS3</em>, garantimos que leitores de tela, motores de busca e usuários em dispositivos móveis tenham uma experiência rápida, inclusiva e consistente.
+          </p>
+          <a href="#cabecalho-principal" class="btn-acao">Voltar ao Topo ↑</a>
+        </article>
+
+        <article class="artigo-secundario">
+          <div class="meta-artigo">
+            <span class="tag-categoria">INTELIGÊNCIA ARTIFICIAL</span>
+            <span class="tempo-leitura">4 min de leitura</span>
+          </div>
+          <h3>Como modelos locais estão transformando o desenvolvimento</h3>
+          <p>
+            Ferramentas de execução local permitem testar assistentes de código e visão computacional com mais privacidade e menor latência.
+          </p>
+          <span class="autor-artigo">Por Redação TechPulse</span>
+        </article>
+      </div>
+    </section>
 
   </main>
 
   <!-- Rodapé -->
   <footer id="sobre">
     <div class="container">
-      <p><strong>TechPulse Portal de Tecnologia</strong> &copy; 2026 — Todos os direitos reservados.</p>
-      <p class="subtexto-rodape">Desenvolvido com foco em acessibilidade, semântica web e design responsivo.</p>
+      <div class="rodape-conteudo">
+        <div>
+          <p class="rodape-marca">Tech<span>Pulse</span></p>
+          <p class="subtexto-rodape">Jornalismo e análise técnica sobre tecnologia, software e segurança digital.</p>
+        </div>
+        <div class="rodape-info">
+          <p>&copy; 2026 TechPulse Portal de Tecnologia. Todos os direitos reservados.</p>
+          <p class="subtexto-rodape">Desenvolvido com HTML5 Semântico e CSS3 Responsivo.</p>
+        </div>
+      </div>
     </div>
   </footer>
 

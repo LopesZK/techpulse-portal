@@ -4,44 +4,67 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Seletor de Tag: Estilos globais */
 body {
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #1E293B;
-  background-color: #F8FAFC;
+  background-color: #F1F5F9;
 }
 
+/* Seletor de Tag: Tipografia */
 h1 {
-  font-size: 1.85rem;
+  font-size: 1.9rem;
   font-weight: 800;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.6px;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: #0F172A;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   text-align: left;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 10px;
+  line-height: 1.35;
 }
 
 p {
   margin-bottom: 16px;
-  color: #334155;
+  color: #475569;
 }
 
+/* Container centralizado */
 .container {
   width: 92%;
-  max-width: 1040px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
+/* ID Exclusivo (#): Cabeçalho fixo com visual moderno */
 #cabecalho-principal {
-  background-color: #0F172A;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(15, 23, 42, 0.96);
+  backdrop-filter: blur(8px);
   color: #FFFFFF;
-  padding: 20px 0;
-  border-bottom: 4px solid #0284C7;
-  margin-bottom: 32px;
+  padding: 16px 0;
+  border-bottom: 3px solid #0284C7;
+  margin-bottom: 36px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
 }
 
 #cabecalho-principal .container {
@@ -52,14 +75,32 @@ p {
   gap: 16px;
 }
 
+.marca-grupo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .logo span {
   color: #38BDF8;
 }
 
+.selo-edicao {
+  background-color: rgba(56, 189, 248, 0.15);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+/* Navegação */
 .menu-navegacao {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 8px;
 }
 
 .menu-navegacao a {
@@ -67,109 +108,295 @@ p {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 .menu-navegacao a:hover,
 .menu-navegacao a:focus {
-  background-color: rgba(56, 189, 248, 0.15);
+  background-color: rgba(56, 189, 248, 0.18);
   color: #38BDF8;
 }
 
+/* Hero / Cartão de Destaque */
 .cartao-destaque {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  background-color: #FFFFFF;
-  padding: 32px;
+  gap: 36px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+  padding: 40px;
   border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  margin-bottom: 32px;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
 }
 
 .texto-destaque {
-  flex: 1.2;
+  flex: 1.25;
+}
+
+.etiqueta-destaque {
+  display: inline-block;
+  color: #0284C7;
+  background-color: rgba(2, 132, 199, 0.1);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.texto-destaque h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.acoes-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
 }
 
 .imagem-destaque {
-  flex: 0.8;
+  flex: 0.85;
   text-align: center;
 }
 
 .imagem-destaque img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  border: 2px solid #1E293B;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
 }
 
-.secao-servicos,
-.artigo-principal {
-  background-color: #FFFFFF;
-  padding: 28px 32px;
-  border: 1px solid #E2E8F0;
-  border-left: 5px solid #0284C7;
-  border-radius: 10px;
-  margin-bottom: 28px;
+/* Cabeçalhos de Seção */
+.cabecalho-secao {
+  margin-bottom: 24px;
+}
+
+.cabecalho-secao p {
+  margin-bottom: 0;
+  font-size: 1.02rem;
+}
+
+/* Seção de Tecnologias com Lista em Grid de 3 Cartões */
+.secao-servicos {
+  margin-bottom: 40px;
 }
 
 .lista-tecnologias {
-  margin-left: 20px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-tecnologia {
+  background-color: #FFFFFF;
+  padding: 26px;
+  border: 1px solid #E2E8F0;
+  border-top: 4px solid #0284C7;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-tecnologia:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.09);
+}
+
+.icone-card {
+  font-size: 1.8rem;
+  background-color: #F0F9FF;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid #BAE6FD;
+}
+
+.card-tecnologia strong {
+  font-size: 1.1rem;
+  color: #0F172A;
+}
+
+.card-tecnologia span:last-child {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.55;
+}
+
+/* Seção de Artigos */
+.secao-noticias {
+  margin-bottom: 48px;
+}
+
+.grade-artigos {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.artigo-principal,
+.artigo-secundario {
+  background-color: #FFFFFF;
+  padding: 32px;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.artigo-principal {
+  border-left: 5px solid #0284C7;
+}
+
+.meta-artigo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.tag-categoria {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0369A1;
+  background-color: #E0F2FE;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.tempo-leitura {
+  font-size: 0.82rem;
+  color: #64748B;
+}
+
+.autor-artigo {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0284C7;
   margin-top: 12px;
 }
 
-.lista-tecnologias li {
-  margin-bottom: 12px;
-  padding-left: 6px;
-  color: #1E293B;
-}
-
+/* Classe Reutilizável (.): Botões de Ação */
 .btn-acao {
   display: inline-block;
-  background-color: #0284C7;
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
   color: #FFFFFF;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
   text-align: center;
   padding: 12px 24px;
-  border: 2px solid #0369A1;
-  border-radius: 8px;
-  margin-top: 8px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  border: 1px solid #0369A1;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-self: flex-start;
 }
 
 .btn-acao:hover,
 .btn-acao:focus {
-  background-color: #0369A1;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.38);
 }
 
+.btn-secundario {
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 12px 22px;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secundario:hover,
+.btn-secundario:focus {
+  background-color: #F8FAFC;
+  border-color: #0284C7;
+  color: #0284C7;
+}
+
+/* Seletor de Tag: Rodapé */
 footer {
   background-color: #0F172A;
   color: #CBD5E1;
-  text-align: center;
-  padding: 24px 0;
-  border-top: 3px solid #1E293B;
-  margin-top: 40px;
+  padding: 36px 0;
+  border-top: 4px solid #0284C7;
+  margin-top: 48px;
 }
 
-footer p {
+.rodape-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rodape-marca {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.rodape-marca span {
+  color: #38BDF8;
+}
+
+.rodape-info {
+  text-align: right;
+}
+
+.rodape-info p {
   color: #E2E8F0;
-  margin-bottom: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
 }
 
 .subtexto-rodape {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: #94A3B8;
   margin-bottom: 0;
 }
 
+
+@media (max-width: 860px) {
+  .lista-tecnologias {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-artigos {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
+  #cabecalho-principal {
+    position: static;
+  }
+
   #cabecalho-principal .container {
     flex-direction: column;
     text-align: center;
@@ -178,23 +405,25 @@ footer p {
   .menu-navegacao {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
   }
 
   .cartao-destaque {
     flex-direction: column;
-    padding: 22px;
+    padding: 24px;
   }
 
-  h1 {
-    font-size: 1.6rem;
+  .texto-destaque h2 {
+    font-size: 1.55rem;
   }
 
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .btn-acao {
+  .btn-acao,
+  .btn-secundario {
     width: 100%;
+  }
+
+  .rodape-conteudo,
+  .rodape-info {
+    flex-direction: column;
+    text-align: center;
   }
 }
